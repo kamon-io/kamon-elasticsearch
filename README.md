@@ -2,8 +2,7 @@ Elasticsearch Integration ![Build Status](https://travis-ci.org/kamon-io/kamon-e
 ==========================
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kamon-io/Kamon?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-***kamon-elasticsearch*** [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.kamon/kamon-elasticsearch_2.11/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.kamon/kamon-elasticsearch_2.11)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.kamon/kamon-elasticsearch_2.11/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.kamon/kamon-elasticsearch_2.11)
 
 
 The `kamon-elasticsearch` module brings bytecode instrumentation to trace elasticsearch requests
@@ -17,6 +16,23 @@ The bytecode instrumentation provided by the `kamon-elasticsearch` module hooks 
 start and finish segments for requests that are issued within a trace. This translates into you having metrics about how
 the requests you are doing are behaving.
 
+### Getting Started
+
+Kamon Elasticsearch module is currently available for Scala 2.10, 2.11 and 2.12.
+
+Supported releases and dependencies are shown below.
+
+| kamon-elasticseach  | status | jdk  | scala            | akka   |
+|:------:|:------:|:----:|------------------|:------:|
+|  0.6.5 | stable | 1.7+, 1.8+ | 2.10, 2.11, 2.12  | 2.3.x, 2.4.x |
+
+To get started with SBT, simply add the following to your `build.sbt`
+file:
+
+```scala
+libraryDependencies += "kamon.io" %% "kamon-elasticsearch" % "0.6.5"
+```
+****
 ### Metrics ###
 
 The following metrics will be recorded:
