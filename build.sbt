@@ -27,4 +27,4 @@ lazy val root = (project in file("."))
       libraryDependencies ++=
         compileScope(kamonCore, elasticsearch) ++
         providedScope(aspectJ) ++
-        testScope(scalatest, akkaTestKit, slf4jApi))
+        testScope(scalatest, akkaDependency("testkit").value, slf4jApi))
