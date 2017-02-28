@@ -14,17 +14,16 @@
  */
 
 
-import AspectJ._
-import Settings._
-import Dependencies._
+val kamonVersion      = "0.6.6"
+val slf4jVersion      = "1.7.7"
+val kamonCore         = "io.kamon"                  %%  "kamon-core"            % kamonVersion
+val elasticsearch     = "org.elasticsearch"         %   "elasticsearch"         % "2.4.3"
 
 lazy val root = (project in file("."))
   .settings(name := "kamon-elasticsearch")
-  .settings(basicSettings: _*)
-  .settings(formatSettings: _*)
   .settings(aspectJSettings: _*)
   .settings(
       libraryDependencies ++=
         compileScope(kamonCore, elasticsearch) ++
         providedScope(aspectJ) ++
-        testScope(scalatest, akkaDependency("testkit").value, slf4jApi))
+        testScope(scalatest, akkaDependency("testkit").value, slf4jApi, slf4jnop))
