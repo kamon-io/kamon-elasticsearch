@@ -14,9 +14,8 @@
  */
 
 
-val kamonVersion      = "0.6.6"
 val slf4jVersion      = "1.7.7"
-val kamonCore         = "io.kamon"                  %%  "kamon-core"            % kamonVersion
+val kamonCore         = "io.kamon"                  %%  "kamon-core"            % "0.6.7"
 val elasticsearch     = "org.elasticsearch"         %   "elasticsearch"         % "2.4.3"
 
 lazy val root = (project in file("."))
